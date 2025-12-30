@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rally Size Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+    </div>
+
+    <main class="container">
+        <div class="card glass">
+            <header>
+                <h1>Rally Size Calculator</h1>
+                <p class="subtitle">Enter values to calculate automatically</p>
+            </header>
+
+            <div class="input-group">
+                <label for="numberInput">Sponsor Leadership Size (100,000 - 500,000)</label>
+                <div class="input-wrapper">
+                    <input type="text" id="numberInput" inputmode="numeric" placeholder="Ex: 150,000" value="420,700">
+                    <span class="focus-border"></span>
+                </div>
+                <p id="error-message" class="error-message"></p>
+            </div>
+
+            <div class="input-group">
+                <label for="unitLeadershipInput">Unit Leadership (Multiple of 30)</label>
+                <div class="select-wrapper">
+                    <select id="unitLeadershipInput">
+                        <!-- Options populated by JS -->
+                    </select>
+                </div>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="leaderBoostCheckbox" checked>
+                <label for="leaderBoostCheckbox">Ensure Leader Capacity (50,000+)</label>
+            </div>
+
+            <div class="result-section">
+                <div class="result-main">
+                    <span class="result-label">Participants (Excluding Leader)</span>
+                    <div class="result-value-large" id="val-people">---</div>
+                </div>
+
+                <div class="leader-section">
+                    <span class="result-label">Leader Capacity</span>
+                    <div class="leader-value">
+                        <span id="val-leader-total">---</span>
+                        <span class="leader-detail" id="val-leader-detail"></span>
+                    </div>
+                    <div class="leader-ships-grid">
+                        <div class="leader-ship-item">
+                            <span class="label">Frigate</span>
+                            <span class="val" id="val-leader-escort">---</span>
+                        </div>
+                        <div class="leader-ship-item">
+                            <span class="label">Destroyer</span>
+                            <span class="val" id="val-leader-destroyer">---</span>
+                        </div>
+                        <div class="leader-ship-item">
+                            <span class="label">Cruiser</span>
+                            <span class="val" id="val-leader-cruiser">---</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="result-divider">
+                    <span>Member Fleet Composition (Per Person)</span>
+                </div>
+
+                <div class="result-grid">
+                    <div class="result-item">
+                        <span class="result-label">Frigate</span>
+                        <div class="result-value" id="val-escort">---</div>
+                        <div class="result-sub-detail" id="val-escort-detail"></div>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Destroyer</span>
+                        <div class="result-value" id="val-destroyer">---</div>
+                        <div class="result-sub-detail" id="val-destroyer-detail"></div>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Cruiser</span>
+                        <div class="result-value" id="val-cruiser">---</div>
+                        <div class="result-sub-detail" id="val-cruiser-detail"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
