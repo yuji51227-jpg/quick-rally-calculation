@@ -257,7 +257,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .result-value-large::after {
-    content: '人';
+    content: 'persons';
     font-size: 1.5rem;
     margin-left: 8px;
     color: var(--text-muted);
@@ -401,4 +401,5 @@ input[type=number]::-webkit-outer-spin-button {
     .result-grid {
         grid-template-columns: 1fr;
     }
+
 }
